@@ -1,5 +1,8 @@
 package com.consultorioonline.repository;
 
-public interface RolRepository {
+import com.consultorioonline.entity.Rol;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface RolRepository extends JpaRepository<Rol, Long> {
 
 }

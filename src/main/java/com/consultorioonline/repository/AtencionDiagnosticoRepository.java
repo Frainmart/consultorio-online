@@ -1,5 +1,8 @@
 package com.consultorioonline.repository;
 
-public interface AtencionDiagnosticoRepository {
+import com.consultorioonline.entity.AtencionDiagnostico;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AtencionDiagnosticoRepository extends JpaRepository<AtencionDiagnostico, Long> {
 
 }

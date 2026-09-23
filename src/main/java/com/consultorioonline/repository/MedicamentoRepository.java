@@ -1,5 +1,8 @@
 package com.consultorioonline.repository;
 
-public interface MedicamentoRepository {
+import com.consultorioonline.entity.Medicamento;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MedicamentoRepository extends JpaRepository<Medicamento, Long> {
 
 }

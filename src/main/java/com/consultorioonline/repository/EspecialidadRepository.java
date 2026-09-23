@@ -1,5 +1,8 @@
 package com.consultorioonline.repository;
 
-public interface EspecialidadRepository {
+import com.consultorioonline.entity.Especialidad;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EspecialidadRepository extends JpaRepository<Especialidad, Long> {
 
 }
