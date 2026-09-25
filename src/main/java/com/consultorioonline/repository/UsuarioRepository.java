@@ -1,8 +1,15 @@
 package com.consultorioonline.repository;
 
-import com.consultorioonline.entity.Usuario;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.consultorioonline.entity.Usuario;
+
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+
+    @EntityGraph(attributePaths = "rol")
+    Optional<Usuario> findByCorreoElectronico(String correoElectronico);
 
 }

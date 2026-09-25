@@ -1,5 +1,8 @@
 package com.consultorioonline.config;
 
-public class OpenApiConfig {
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
+public class OpenApiConfig {
+    // La documentación OpenAPI se configurará al incorporar springdoc.
 }

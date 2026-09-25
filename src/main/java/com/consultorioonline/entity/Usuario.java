@@ -34,6 +34,22 @@ public class Usuario {
     public Usuario() {
     }
 
+    @PrePersist
+    protected void alCrear() {
+        LocalDateTime ahora = LocalDateTime.now();
+
+        if (fechaCreacion == null) {
+            fechaCreacion = ahora;
+        }
+
+        fechaActualizacion = ahora;
+    }
+
+    @PreUpdate
+    protected void alActualizar() {
+        fechaActualizacion = LocalDateTime.now();
+    }
+
     public Long getIdUsuario() {
         return idUsuario;
     }
